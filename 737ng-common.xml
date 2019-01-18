@@ -375,8 +375,8 @@
 				</binding>
 			</key>
 
-			<key n="127">
-				<name>Delete</name>
+			<key n="61">
+				<name>equal</name>
 				<desc>Thrust reversers toggle</desc>
 				<binding>
 					<condition>
