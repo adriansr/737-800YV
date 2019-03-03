@@ -312,7 +312,7 @@
 		<input>/controls/engines/throttle-cmd-pid</input>
 		<output>/controls/engines/engine[0]/throttle</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.15</max-rate-of-change>
+		<max-rate-of-change>1</max-rate-of-change>
 	</filter>
 	
 	<!-- Engine 2 -->
@@ -338,7 +338,7 @@
 		<input>/controls/engines/throttle-cmd-pid</input>
 		<output>/controls/engines/engine[1]/throttle</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.15</max-rate-of-change>
+		<max-rate-of-change>1</max-rate-of-change>
 	</filter>
 
 </PropertyList>
