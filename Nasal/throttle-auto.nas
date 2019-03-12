@@ -1,7 +1,7 @@
 
 var throttleIdle = 0;
 var throttleMax  = .94;
-var throttleMovePerSecond = 0.15;
+var throttleMovePerSecond = 0.10;
 var throttleUpdInterval = 0.05;
 
 var setMaxPower = func{
