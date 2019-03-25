@@ -1,9 +1,9 @@
 # print G force when touchdown.
 
-var VERSION = "1.0";
+var VERSION = "1.1";
 
 props.globals.initNode("position/gear-agl-ft", 0);
-var N = 200;
+var N = 100;
 var count = N;
 var maxG = 0.0;
 var minVs = 0.0;
@@ -24,7 +24,11 @@ var printGforce = func {
         if (gdamped > 0.0) {
             if (gdamped > maxG) {
                 maxG = gdamped;
-                touchGs = getprop("velocities/groundspeed-kt");
+                
+            }
+            gs = getprop("velocities/groundspeed-kt");
+            if (gs > touchGs) {
+                touchGs = gs;
             }
             if (vs < minVs) {
                 minVs = vs;
@@ -41,8 +45,10 @@ var printGforce = func {
                 print("> Correct landing (60-180fpm)");
             } else if (minVs >= -240) {
                 print("> A bit too firm landing (180-240fpm)");
+            } else if (minVs > -600) {
+                print("> Firm landing (240-600fpm)");
             } else {
-                print("> Hard landing (>240fpm)");
+                print("> Hard landing (>600fpm)");
             }
 	    print(">=======================================");
 	}
