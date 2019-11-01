@@ -370,6 +370,28 @@
 				</binding>
 			</key>
 
+    <key n="108">
+      <name>l</name>
+      <desc>Toggle landing lights</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights</property>
+      </binding>
+    </key>
+	
+
+    <key n="76">
+      <name>L</name>
+      <desc>Toggle taxi lights</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/Taxi-light</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/RB-light</property>
+      </binding>
+    </key>
 			<key n="61">
 				<name>equal</name>
 				<desc>Thrust reversers toggle</desc>
