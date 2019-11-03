@@ -5,6 +5,33 @@
 <PropertyList>
 	
 	<fx>
+            <!-- Speed callouts -->
+            <callout>
+                    <name>eightyknots</name>
+                    <mode>once</mode>
+                    <path>80kt.wav</path>
+                    <condition>
+                            <and>
+                                    <or>
+                                            <property>gear/gear[0]/wow</property>
+                                            <property>gear/gear[1]/wow</property>
+                                            <property>gear/gear[2]/wow</property>
+                                    </or>
+                                    <less-than>
+                                            <property>velocities/airspeed-kt</property>
+                                            <property>it-autoflight/internal/lookahead-5-sec-airspeed-kt</property>
+                                    </less-than>
+                                    <greater-than>
+                                            <property>velocities/airspeed-kt</property>
+                                            <value>80</value>
+                                    </greater-than>
+                                    <less-than>
+                                            <property>velocities/airspeed-kt</property>
+                                            <value>88</value>
+                                    </less-than>
+                            </and>
+                    </condition>
+            </callout>
 	
     <callout>
     	<name>V1</name>
