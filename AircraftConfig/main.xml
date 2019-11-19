@@ -306,6 +306,21 @@
 				<live>true</live>
 			</checkbox>
 		
+
+			<checkbox>
+				<halign>left</halign>
+				<label>Increase more FPS (Disables interior detail)</label>
+				<property>controls/switches/extra-increase-fps</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<binding>
+					<command>nasal</command>
+					<script>acconfig.writeSettings();</script>
+				</binding>
+				<live>true</live>
+			</checkbox>
+		
 			<group>
 				<layout>hbox</layout>
 				

@@ -84,6 +84,24 @@
   <model>
     <name>Cockpit</name>
     <path>Aircraft/737-800YV/Models/cockpit.xml</path>
+    <condition>
+      <not>
+        <property>controls/switches/extra-increase-fps</property>
+      </not>
+    </condition>
+    <offsets>
+      <x-m>-18.32</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <name>Cockpit</name>
+    <path>Aircraft/737-800YV/Models/cockpit-reduced.xml</path>
+    <condition>
+        <property>controls/switches/extra-increase-fps</property>
+    </condition>
     <offsets>
       <x-m>-18.32</x-m>
       <y-m>0.0</y-m>

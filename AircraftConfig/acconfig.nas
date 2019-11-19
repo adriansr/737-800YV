@@ -24,6 +24,7 @@ setprop("/systems/acconfig/spin", "-");
 setprop("/systems/acconfig/options/welcome-skip", 0);
 setprop("/systems/acconfig/options/yokes-visible", 1);
 setprop("/systems/acconfig/options/increase-fps", 0);
+setprop("/systems/acconfig/options/extra-increase-fps", 0);
 var main_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/main/dialog", "Aircraft/737-800YV/AircraftConfig/main.xml");
 var welcome_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/welcome/dialog", "Aircraft/737-800YV/AircraftConfig/welcome.xml");
 var ps_load_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/psload/dialog", "Aircraft/737-800YV/AircraftConfig/psload.xml");
@@ -52,11 +53,13 @@ var readSettings = func {
 	io.read_properties(getprop("/sim/fg-home") ~ "/Export/737-800YV-config.xml", "/systems/acconfig/options");
 	setprop("/sim/yokes-visible", getprop("/systems/acconfig/options/yokes-visible"));
 	setprop("/controls/switches/increase-fps", getprop("/systems/acconfig/options/increase-fps"));
+	setprop("/controls/switches/extra-increase-fps", getprop("/systems/acconfig/options/extra-increase-fps"));
 }
 
 var writeSettings = func {
 	setprop("/systems/acconfig/options/yokes-visible", getprop("/sim/yokes-visible"));
 	setprop("/systems/acconfig/options/increase-fps", getprop("/controls/switches/increase-fps"));
+	setprop("/systems/acconfig/options/extra-increase-fps", getprop("/controls/switches/extra-increase-fps"));
 	io.write_properties(getprop("/sim/fg-home") ~ "/Export/737-800YV-config.xml", "/systems/acconfig/options");
 }
 
