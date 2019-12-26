@@ -714,6 +714,6 @@ var cdu = func {
 		setprop("/instrumentation/cdu/output/line4/right-title",line4rt);
 		setprop("/instrumentation/cdu/output/line5/right-title",line5rt);
 		setprop("/instrumentation/cdu/output/line6/right-title",line6rt);
-		settimer(cdu,0.2);
+		settimer(cdu,0.5);
     }
 _setlistener("/sim/signals/fdm-initialized", cdu); 
