@@ -108,7 +108,7 @@
 		<reference>/it-autoflight/internal/kts</reference>
 		<output>/controls/engines/throttle-cmd-pid</output>
 		<config>
-			<Kp>0.06</Kp>
+			<Kp>0.12</Kp>
 			<Ti>9.0</Ti>
 			<Td>0.00001</Td> 
 			<u_min>0.005</u_min>
@@ -149,7 +149,7 @@
 		</reference>
 		<output>/controls/engines/throttle-cmd-pid</output>
 		<config>
-			<Kp>0.06</Kp>
+			<Kp>0.10</Kp>
 			<Ti>9.0</Ti>
 			<Td>0.00001</Td>  
 			<u_min>0.005</u_min>
