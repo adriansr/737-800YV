@@ -58,7 +58,7 @@ var _list = setlistener("sim/signals/fdm-initialized", func() {
 	NDFo.update();
 
 	removelistener(_list); # run ONCE
-});
+}, 0, 0);
 
 var showNd = func(pilot='cpt') {
 	var dlg = canvas.Window.new([512, 512], "dialog");

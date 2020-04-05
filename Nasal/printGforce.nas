@@ -9,6 +9,12 @@ var maxG = 0.0;
 var minVs = 0.0;
 var touchGs = 0.0;
 var kill = 0;
+var pgf_started = 0;
+var printGforce_start = func {
+    if (pgf_started == 1) return;
+    pgf_started = 1;
+    printGforce();
+}
 
 var printGforce = func {
     var vs = getprop("velocities/vertical-speed-fps") * 60;
@@ -76,4 +82,4 @@ var printGforce = func {
 };
 
 print("> Loaded printGforce version ", VERSION);
-setlistener("/sim/signals/fdm-initialized", printGforce);
+setlistener("/sim/signals/fdm-initialized", printGforce_start, 0, 0);
