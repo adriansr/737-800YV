@@ -392,7 +392,35 @@
         <property>/controls/lighting/RB-light</property>
       </binding>
     </key>
-			<key n="61">
+
+    <key n="82">
+      <name>R</name>
+      <desc>Decrease auto-brake setting</desc>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/gear/autobrakes</property>        
+         <step>-1</step>
+         <min>-1</min>
+         <max>5</max>                
+         <wrap>true</wrap>       
+        </binding>
+    </key>
+
+    <key n="114">
+      <name>r</name>
+      <desc>Increase auto-brake setting</desc>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/gear/autobrakes</property>        
+         <step>1</step>
+         <min>-1</min>
+         <max>5</max>                
+         <wrap>true</wrap>       
+        </binding>
+    </key>
+
+
+			<key n="8">
 				<name>equal</name>
 				<desc>Thrust reversers toggle</desc>
 				<binding>
