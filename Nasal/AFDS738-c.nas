@@ -12,9 +12,13 @@ setprop("/autopilot/display/afds-mode-rectangle-time", 0);
 setprop("/it-autoflight/custom/athr-deactivate", 0);
 setprop("/controls/engines/throttle-cmd-norm", 0);
 
+var loop_started = 0;
 setlistener("sim/signals/fdm-initialized", func {
-	loopFMA.start();
-});
+        if (!loop_started) {
+            loop_started = 1;
+            loopFMA.start();
+        }
+}, 0, 0);
 
 var loopFMA = maketimer(0.05, func {
 	# Boxes
